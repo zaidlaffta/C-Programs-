@@ -1,0 +1,12 @@
+//Binary search function using C++
+int binarySearch(int arr[], int low, int hi, int x) {
+	if (hi >= low) {
+		int mid = low + (hi - 1) / 2;
+		if (arr[mid] == x)
+			return mid;
+		if (arr[mid] > x)
+			return binarySearch(arr, low, mid - 1, x);
+		else
+			return binarySearch(arr, mid + 1, hi, x);
+	}
+ }
